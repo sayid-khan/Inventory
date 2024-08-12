@@ -2,10 +2,6 @@ from sqlalchemy import create_engine, text
 import os
 
 
-def configure():
-    load_dotenv()
-
-configure()
 
 db_connection_str = os.getenv('DB_CONNECTION_STR')
 
