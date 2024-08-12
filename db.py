@@ -1,7 +1,13 @@
 from sqlalchemy import create_engine, text
+from dotenv import load_dotenv      #just to secure the database details
+import os
 
 
-db_connection_str = 'mysql+pymysql://253zViqMi1Pyfkj.root:Dig2KoqwUVk7fMON@gateway01.ap-southeast-1.prod.aws.tidbcloud.com/test?charset=utf8mb4'
+def configure():                    #just to secure the database details
+    load_dotenv()
+
+
+db_connection_str = os.getenv('DB_CONNECTION_STR')
 
 
 engine = create_engine(db_connection_str, connect_args={
