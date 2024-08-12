@@ -1,11 +1,12 @@
 from sqlalchemy import create_engine, text
-from dotenv import load_dotenv      #just to secure the database details
+from dotenv import load_dotenv
 import os
 
 
-def configure():                    #just to secure the database details
+def configure():
     load_dotenv()
 
+configure()
 
 db_connection_str = os.getenv('DB_CONNECTION_STR')
 
